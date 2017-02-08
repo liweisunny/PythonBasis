@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/python_study.iml" filepath="$PROJECT_DIR$/.idea/python_study.iml" />
+      <module fileurl="file://F:/ChromeDownloads/rq-dashboard-master/.idea/rq-dashboard-master.iml" filepath="F:/ChromeDownloads/rq-dashboard-master/.idea/rq-dashboard-master.iml" />
+    </modules>
+  </component>
+</project>
