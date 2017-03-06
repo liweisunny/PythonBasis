@@ -26,5 +26,5 @@ sys.path.append('D:\\Python27\\lib\\site-packages')
 import site_hello
 site_hello.hello('site-packages目录下的模块导入成功！！')
 
-
+# 10.1.4 包
 
