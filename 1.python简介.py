@@ -70,7 +70,7 @@ y="liwei"
 print(x+y)
 
 #值被转换成字符串的两种机制，str()函数和repr()函数
-#str()函数会把值转换为合理形式的字符串，而repr()函数会创建一个字符串，它以合法的pyth表达式的形式来表示值
+#str()函数会把值转换为合理形式的字符串，而repr()函数会创建一个字符串，它以合法的python表达式的形式来表示值
 #简单来说str、repr函数是将python值转换为字符串的两种方法，函数str让字符串更易于阅读，而repr则把结果字符串转换为合法的python表达式。
 print (repr("hello. word!"));
 print (str("hello. word!"));

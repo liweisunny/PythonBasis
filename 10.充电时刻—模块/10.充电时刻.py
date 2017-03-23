@@ -90,17 +90,17 @@ print os.environ['PYTHONPATH']
 #os.system('/user/bin/firebox')
 
 # ②.windows中的调用方式是：
-os.system(r'C:\"Program Files (x86)"\"Google\Chrome"\"Application"\chrome.exe')#注意每个目录下的双引号
+#os.system(r'C:\"Program Files (x86)"\"Google\Chrome"\"Application"\chrome.exe')#注意每个目录下的双引号
 # 注意，我很仔细地将Program Files和Google\Chrome以及Application放入引号中，不然DOS(它负责处理这个命令)就会在空格处停下来(对于在PYTHONPATH中设定的目录来说，这点也同样重要)。
 # 同时，注意必须使用反斜线，因为DOS会被正斜线弄糊涂。如果运行程序，你会注意到浏览器会试图打开叫做Files"\…的网站一也就是在空格后面的命令部分。
 # 另一方面，如果试图在IDLE中运行该代码，你会看到DOS窗口出现了，但是没有启动浏览器并没有出现，除非关闭DOS窗口。总之，使用以上代码并不是完美的解决方法。
 # 另外一个可以更好地解决问题的函数是Windows特有的函数：os.startfile:
-os.startfile(r'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')
+#os.startfile(r'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')
 # 可以看到，os.startfile接受一般路径，就算包含空格也没问题(也就是不用像在os.system例子中那样将Program Fiels放在引号中)。
 # 注意，在Windows中，由os.system(或者os.startfile)启动了外部程序之后，Python程序仍然会继续运行，而在UNIX中，程序则会中止，等待os.system命令完成。
 #更好的解决方案
 import webbrowser #该模块的open函数可以自动启动web浏览器并打开指定的url
-webbrowser.open('http:\\www.python.org')#如果url=""会打开当前项目路径
+#webbrowser.open('http:\\www.python.org')#如果url=""会打开当前项目路径
 
 # 3. os.sep模块变量是用于路径名中的分隔符。UNIX(以及Mac OS X中命令行版本的Python )中的标准分隔符是“/"，Windows中的是“\\"(即Python针对单个反斜线的语法)，而Mac OS中的是“:”(有些平台上，os.altsep包含可选的路径分隔符，比如Windows中的”/“)。
 #    你可以在组织路径的时候使用os.pathsep,就像在PYTHONPATH中一样。pathsep用于分割路径名:UNIX(以及Mac OS X中的命令行版本的Python )使用“:”，Windows使用“;"，Mac OS使用“::”。
@@ -129,5 +129,257 @@ webbrowser.open('http:\\www.python.org')#如果url=""会打开当前项目路径
 # 而你需要查找某个词。如果已经在排序中找到了这个词的位置，那么你就能放心地跳到下一个文件了。
 
 # 8. fileinput.close函数关闭整个文件链，结束迭代。
+
+# 10.3.4 集合、堆、双端队列
+# 1.集合 set
+print set(range(10)) #set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+#集合是由序列（或者其他可迭代对象）构建的。它们主要用于检查成员资格，因此副本是被忽略的：
+print set([0,1,2,3,0,1,2,3,4,5])#set([0, 1, 2, 3, 4, 5])
+#和字典一样，集合元素的顺序是随意的，因此我们不应该以元素的顺序作为依据进行编程
+print set(['fee','fie','foe','fee'])#set(['foe', 'fee', 'fie'])
+#集合操作
+#①求两个集合的并集，使用union方法或者使用运算符“|”：
+a=set([1,2,3])
+b=set([2,3,4])
+print a.union(b) #set([1,2,3,4])
+print a|b        #set([1,2,3,4])
+
+#②求两个集合的交集：intersection、&
+print a.intersection(b)#set([2, 3])
+print a&b              #set([2, 3])
+
+#③判断子集、父集
+c=a&b
+print c.issubset(a)#判断c是否是a的子集
+print c<=a #True
+print c.issuperset(a)#判断c是否是a的超集
+print  c>=a #False
+
+#④差集
+a.difference(b)#set([1]) a与b的差集 = a-b
+print a-b
+
+#⑤对称差集
+print a.symmetric_difference(b)#set([1,4])
+print b.symmetric_difference(a)#set([1,4])
+print a^b#set([1,4])
+print b^a#set([1,4])
+
+# copy 返回一个浅复制
+print a.copy()
+print a.copy() is a
+
+#说明：集合是可变的，所以不能用作字典中的键。另外一个问题就是集合本身只能包含不可变（可散列的）值，所以也就不能包含其他集合，在实际当中，集合的集合很是常用，所以这就是个问题了.。
+# 幸好嗨哟个frozenset类型，用于代表不可变（可散列）的集合
+#例
+a=set(range(5))
+b=set(range(2,5))
+#a.add(b)#报错
+a.add(frozenset(b))#frozenset构造函数创建给定集合的副本
+print a
+
+#
+myset=[]
+for i in range(10):
+    myset.append(set(range(i,i+5)))
+print reduce(set.union,myset)
+
+#2.堆
+#堆(heap)，它是优先队列的一种。使用优先队列能够以任意顺序增加对象，并且能在任何时间(可能在增加对象的同时)找到(也可能是移除)最小的元素，也就是说它比用于列表的min方法要有效率得多。
+#事实上，Python中并没有独立的堆类型—只有一个包含一些堆操作函数的模块，这个模块叫做heapq (q是queue的缩写，即队列)，包括6个函数。
+
+#① heappush函数用于增加堆的项。注意，不能将它用于任何之前讲述的列表中—它只能用于通过各种堆函数建立的列表中。原因是元素的顺序很重要(尽管看起来是随意排列，元素并不是进行严格排序的)。
+#例
+from heapq import *
+from random import shuffle
+data=range(10)
+shuffle(data)#将序列的所有元素随机排序。shuffle()是不能直接访问的，需要导入 random 模块，然后通过 random 静态对象调用该方法。返回随机排序后的序列。
+heap=[]
+for n in data:
+    heappush(heap,n)
+print heap
+heappush(heap,0.5)
+print heap
+# 元素的顺序并不像看起来那么随意。它们虽然不是严格排序的，但是也有规则的:位于i位置上的元素总比i//2位置处的元素大(反过来说就是i位置处的元素总比2*i以及2*i+1位置处的元素小)。这是底层堆算法的基础，而这个特性称为堆属性(heap property)。
+
+#② heappop函数弹出最小的元素。一般来说都是在索引0处的元素，并且会确保剩余元素中最小的那个占据这个位置(保持刚才提到的堆属性)。一般来说，尽管弹出列表的第一个元素并不是很有效率，但是在这里不是问题，因为heappop在“幕后”会做一些精巧的移位操作:
+print heappop(heap)#0
+print heap
+print heappop(heap)#0.5
+print heap
+print heappop(heap)#1
+
+#③ heapify函数使用任意列表作为参数，并且通过尽可能少的移位操作，将其转换为合法的堆(事实上是应用了刚才提到的堆属性)。如果没有用heappush建立堆，那么在使用heappush和heappop前应该使用这个函数。
+#例
+heap=[5,6,3,8,2,9,4,7,0,1]
+heapify(heap)
+print heap
+
+#④ heapreplace函数不像其他函数那么常用。它弹出堆的最小元素，并且将新元素推入。这样做比调用heappop之后再调用heappush更高效。
+#例
+print heap
+print heapreplace(heap,10)
+print heap
+
+#补充：heapq模块中剩下的两个函数nlargest(n,iter)和nsmallest(n,iter)分别用来寻找任何可迭代对象iter中第n大或第n小的元素。你可以使用排序(比如使用sorted函数)和分片来完成这个工作，但是堆算法更快而且更有效地使用内存(还有一个没有提及的优点:更易用)。
+
+# 3.双端队列
+# 双端队列(Double-ended queue，或称deque)在需要按照元素增加的顺序来移除元素时非有用。Python 2.4增加了collections模块，它包括deque类型。
+# 双端队列通过可迭代对象(比如集合)创建，而且有些非常有用的方法，如下例所示:
+from collections import deque
+q=deque(range(5))
+print q
+q.append(5)
+q.appendleft(6)
+print q
+print q.pop()#5
+print q.popleft()#6
+print q
+q.rotate(3)#无返回值，将每个元素向右移3位，循环移动
+print q
+q.rotate(-1)#将每个元素向左移1位，循环移动
+print q
+#说明：双端队列好用的原因是它能够有效地在开头(左侧)增加和弹出元素，这是在列表中无法实现的。
+# 除此之外，使用双端队列的好处还有:能够有效地旋转(rotate )元素(也就是将它们左移或右移，使头尾相连)。
+# 双端队列对象还有extend和extendleft方法，extend和列表的extend方法差不多，extendleft则类似于appendleft。注意，extendleft使用的可迭代对象中的元素会反序出现在双端队列中。
+
+# 10.3.5 time模块
+# time模块所包括的函数能够实现以下功能:获得当前时间、操作时间和日期、从字符串读取时间以及格式化时间为字符串。
+# 说明：在Python中，通常有这几种方式来表示时间：1）时间戳(从新纪元开始计算的秒数) 2）格式化的时间字符串 3）元组（struct_time）共九个元素。由于Python的time模块实现主要调用C库，所以各个平台可能有所不同。
+# UTC（Coordinated Universal Time，世界协调时）亦即格林威治天文时间，世界标准时间。在中国为UTC+8。DST（Daylight Saving Time）即夏令时。
+# 时间戳（timestamp）的方式：通常来说，时间戳表示的是从1970年1月1日00:00:00开始按秒计算的偏移量。我们运行“type(time.time())”，返回的是float类型。返回时间戳方式的函数主要有time()，clock()等。
+# 元组（struct_time）方式：struct_time元组共有9个元素，返回struct_time的函数主要有gmtime()，localtime()，strptime()。
+import time
+# ①time.localtime([secs])：将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。
+print time.localtime()#time.struct_time(tm_year=2017, tm_mon=3, tm_mday=18, tm_hour=9, tm_min=24, tm_sec=37, tm_wday=5, tm_yday=77, tm_isdst=0)
+# ②time.gmtime([secs])：和localtime()方法类似，gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time。
+print time.gmtime()#time.struct_time(tm_year=2017, tm_mon=3, tm_mday=18, tm_hour=1, tm_min=26, tm_sec=50, tm_wday=5, tm_yday=77, tm_isdst=0)
+# ③time.time()：返回当前时间的时间戳
+print time.time()#1489800410.56
+# ④time.mktime(t)：将一个struct_time转化为时间戳。
+print time.mktime((2017, 3, 18, 1, 26, 50, 5, 77, 0))#必须是九个  1489771610.0
+print time.mktime(time.localtime())#1489800614.0
+# ⑤time.sleep(secs)：线程推迟指定的时间运行。单位为秒。
+#time.sleep(2)
+print '.....2秒后'
+# ⑥time.clock()：这个需要注意，在不同的系统上含义不同。在UNIX系统上，它返回的是“进程时间”，它是用秒表示的浮点数（时间戳）。而在WINDOWS中，第一次调用，返回的是进程运行的实际时间。而第二次之后的调用是自第一次调用以后到现在的运行时间。（实际上是以WIN32上QueryPerformanceCounter()为基础，它比毫秒表示更为精确）
+#time.sleep(1)
+print "clock1:%s" % time.clock()
+#time.sleep(1)
+print "clock2:%s" % time.clock()
+#time.sleep(1)
+print "clock3:%s" % time.clock()
+#说明：其中第一个clock()输出的是程序运行时间第二、三个clock()输出的都是与第一个clock的时间间隔
+# ⑦time.asctime([t])：把一个表示时间的元组或者struct_time表示为这种形式：'Sun Jun 20 23:21:05 1993'。如果没有参数，将会将time.localtime()作为参数传入。
+print time.asctime()#Sat Mar 18 09:35:57 2017
+print time.asctime((2017, 3, 30, 1, 26, 50, 5, 77, 0))#Sat Mar 30 01:26:50 2017
+# ⑧time.ctime([secs])：把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数。它的作用相当于time.asctime(time.localtime(secs))。
+print time.ctime()#Sat Mar 18 09:41:07 2017
+print time.asctime(time.localtime())#Sat Mar 18 09:43:39 2017
+print time.ctime(time.time())#Sat Mar 18 09:41:07 2017
+print time.ctime(189800614.0)#Wed Jan 07 02:23:34 1976
+# ⑨time.strftime(format[, t])：把一个代表时间的元组或者struct_time（如由time.localtime()和time.gmtime()返回）转化为格式化的时间字符串。如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。
+print time.strftime('%Y-%m-%d %X',time.localtime())#2017-03-18 09:48:07
+# ⑩time.strptime(string[, format])：把一个格式化时间字符串转化为struct_time。实际上它和strftime()是逆操作。在这个函数中，format默认为："%a %b %d %H:%M:%S %Y"。
+print time.strptime('2017-03-9 09:48:07','%Y-%m-%d %X')#time.struct_time(tm_year=2017, tm_mon=3, tm_mday=9, tm_hour=9, tm_min=48, tm_sec=7, tm_wday=3, tm_yday=68, tm_isdst=-1)
+
+# 10.3.6 random模块
+import random
+# random模块包含返回随机数的函数，可以用于模拟或者用于任何产生随机输出的程序中。
+# ①random()用于生成一个0到1的随机符点数: 0 <= n < 1.0
+print random.random()#0.681251479099
+# ②getrandbits()以长整型形式返回给定的位数（二进制数）,如果处理的是真正的随机事务（比如加密），这个函数尤为有用
+print random.getrandbits(3)
+# ③random.uniform的函数原型为：random.uniform(a, b)，用于生成一个指定范围内的随机符点数，两个参数其中一个是上限，一个是下限。
+# 如果a > b，则生成的随机数n: a <= n <= b。如果 a <b， 则 b <= n <= a。
+print random.uniform(10,20)
+print random.uniform(20,10)
+# ④random.choice从序列中获取一个随机元素。其函数原型为：random.choice(sequence)。参数sequence表示一个有序类型。
+# 这里要说明 一下：sequence在python不是一种特定的类型，而是泛指一系列的类型。list, tuple, 字符串都属于sequence
+print random.choice('asdadas')#s
+# ⑤randrange()函数random.randrange的函数原型为：random.randrange([start], stop, [step])，从指定范围内，按指定基数递增的集合中 获取一个随机数。
+print random.randrange(10, 100, 2)#结果相当于从[10, 12, 14, 16, ... 96, 98]序列中获取一个随机数。random.randrange(10, 100, 2)在结果上与 random.choice(range(10, 100, 2) 等效。
+print random.randrange(5)#返回0-5随机整数
+# ⑥random.shuffle的函数原型为：random.shuffle(x[, random])，用于将一个列表中的元素原地打乱。没有返回值
+lists=[23,345,675,23,65,2]
+random.shuffle(lists)
+print lists
+# ⑦random.sample的函数原型为：random.sample(sequence, k)，从指定序列中随机获取指定长度的片断。sample函数不会修改原有序列。
+list1=[1,2,3,5,3,4]
+list2=random.sample(list1,2)
+print list2
+#list3=random.sample(list1,8)#不能超出序列最大长度
+list3=random.sample(list1,0)
+print list3#[]
+#练习 自动发牌小程序
+values=range(1,11)+'Jack Queen King'.split()
+suits='liwei lijie libo congyang'.split()
+deck=['%s of %s'%(v,s) for v in values for s in suits]
+shuffle(deck)
+#while deck:
+     #raw_input(deck.pop())
+
+# 10.3.7 shelve模块
+# shelve中唯一有趣的函数是open。在调用它的时候(使用文件名作为参数)，它会返回一个Shelf对象，你可以用它来存储内容。只需要把它当做普通的字典(但是键一定要作为字符串)来操作即可，在完成工作(并且将内容存储到磁盘中)之后，调用它的close方法。
+#潜在的陷阱
+import shelve
+s=shelve.open("data.text")
+s['x']=['a','b','c']
+s['x'].append('d')
+print s['x']#结果是['a','b','c']
+# 说明：当你在shelf对象中查找元素的时候，这个对象都回根据已经存储的版本进行重新构建吗，当你将元素赋给某个键的时候，它就被存储了，上述列子，
+# ①列表['a','b','c']存储在键x下；②获得存储的表示，并且根据它来创建新的列表，而‘d’被天剑到这个副本中，修改的版本还没有保存；③最终，再次获得原始版本--没有‘d’。
+# 为了正确地使用shelve模块修改存储的对象，必须将临时变量绑定到获得的副本上，并且在它被修改后重新存储这个副本：
+temp=s['x']
+temp.append('d')
+s['x']=temp
+print s['x']
+s.close()
+# Python 2.4之后的版本还有个解决方法:将。pen函数的writeback参数设为true。如果这样做，所有从shel赎取或者赋值到shel哟数据结构都会保存在内存(缓存)中，并且只有在关闭shelf
+# 时候才写回到磁盘中。如果处理的数据不大，并且不想考虑这些问题，那么将writeback设为true(确保在最后关闭了shelf)的方法还是不错的。
+#练习 ，数据存储小程序
+#① 创建数据存储方法（store_data） ② 创建查询数据的方法（select_data） ③ 输出帮助信息的方法(help) ④接收命令的方法（receive_cmd） ⑤ 主程序方法
+def store_data(data_dic):
+    pid=raw_input("please enter your id:")
+    person={}#创建人员信息字典
+    person['name']=raw_input("please enter your name:")
+    person['age']=raw_input("please enter your age：")
+    person['phone']=raw_input("please enter your phonenumber:")
+    data_dic[pid]=person
+def select_data(data_dic):
+    pid=raw_input('enter your id:')
+    info=raw_input('what would you like to knom?(name,age,phone)')
+    info=info.strip().lower()
+    print info.capitalize()+'is :'+data_dic[pid][info]
+def help():
+    print 'the available commands are:'
+    print 'store  : Store information about a person'
+    print 'select : Select information about a person'
+    print 'quit   : Save change and exit'
+    print '?      : Print this message'
+def receive_cmd():
+    cmd=raw_input('enter command (? for help)')
+    cmd=cmd.strip().lower()
+    return cmd
+def main():
+    try:
+        data_dic=shelve.open('data.text')
+        while True:
+            cmd=receive_cmd()
+            if cmd=='store':
+                store_data(data_dic)
+            elif cmd=='select':
+                select_data(data_dic)
+            elif cmd=='quit':
+                data_dic.close()
+                return
+            else:
+                help()
+    finally:
+        data_dic.close()
+if __name__=='__main__':
+    main()
+
+
 
 
