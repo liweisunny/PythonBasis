@@ -345,6 +345,7 @@ def store_data(data_dic):
     person['name']=raw_input("please enter your name:")
     person['age']=raw_input("please enter your age：")
     person['phone']=raw_input("please enter your phonenumber:")
+    print 'Save success!!'
     data_dic[pid]=person
 def select_data(data_dic):
     pid=raw_input('enter your id:')
@@ -377,9 +378,59 @@ def main():
                 help()
     finally:
         data_dic.close()
-if __name__=='__main__':
-    main()
+#if __name__=='__main__':
+    #main()
 
+# 10.3.8 re模块--正则表达式
+#1.什么是正则表达式
+#① 通配符'.'，点号可以匹配任何字符（除了换行符）。
+#例
+# '.ython' 可以匹配字符串'python',也可以匹配'jython'、'+ython'、' ython';但是不能匹配'cpython'或者'ython',因为点号只能匹配一个字母，而不是两个或者零个。
+
+#② 对特殊字符进行转义
+#例
+#'python.org'会匹配'python.org'，但也会匹配'pythonzorg',等，使用转义符：'python\\.org'只能匹配'python.org'
+
+#③ 字符集,使用中括号括起来
+#例
+#'[pj]ython'可以匹配'python'和'jython'；'[a-z]',能够按照（按字母顺序）匹配a到z的任意一个字符；[a-zA-Z0-9]能够匹配任意一个大小写字母和数字。
+#反转字符集：'[^abc]'可以匹配任何除了a、b、c之外的字符
+
+#④ 选择符和子模式 ，管道符号：'|'
+# 例
+# 只想匹配'python'和'perl',所需的模式可以写成'python|perl',但是有些时候不需要对整个模式使用选择运算符---只是模式的一部分。
+# 这时可以使用圆括号括起来需要的部分，或称子模式。可以写成'p(ython|erl)'。（注意术语子模式也适用于单个字符）
+
+#⑤ 可选项和重复子模式：在子模式后面加上问号，它就变成了可选项
+#例：
+#r'(http:\\)?(www\.)?python\.org',
+# 这个模式可以匹配的字符串有：'http:\\www.python.org'、'www.python.org'、'python.org'、'http:\\python.org'
+# 上述的例子：①使用原始字符串减少反斜杠的数量；②在使用反斜杠对'.'做了转义；③每个可选子模式都加上了括号；④子模式后面加上问号作为可选项
+
+#⑥(pattern)* 表示允许模式重复0次或多次 ； (pattern)+ 表示允许模式重复1次或多次 ； (pattern){m.n} 表示允许模式重复m至n次。
+#例：
+#r'W+\.python\.org' 可以匹配'W.python.org'、'WW.python,org'、'WWW.python.org'但不能匹配'.python.org';
+#r'W{3,4}\.python\.org' 只能匹配'WWW.python.org'和'WWWW.python.org'
+
+#⑦字符串的开始和结尾：使用 '^'和'$'标记
+#例：
+#'^ht+p' 这个模式会匹配'http://python.org' 但不会匹配'www.http,org'
+#'$ht+p' 这个模式会匹配'www.http' 但不会匹配'www.http,org'等
+
+#2.re模块的内容
+# ①函数compile(pattern[,flags])：将正则表达式（以字符串书写的）转换为模式对象，可以实现更有效率的匹配。
+# ②函数search(pattern，string[,flags])会在给定的字符串中寻找第一个匹配给定正则表达式的字符串。一旦找到子字符串，函数就会返回MatchObject（值为True）,否则返回None(值为False)
+# ③函数match(pattern，string[,flags])会在给定字符串的开头匹配正则表达式，因此 match('p','python')返回True；match('p','www.python.org')返回False
+# ④函数split(pattern，string[,flags]，maxsplit=0)会根据模式的匹配项分割字符串并返回一个列表,maxsplit指定列表返回的元素个数，可以不指定
+# ⑤函数findall(pattern，string)以列表的形式返回给定模式的所有匹配项。
+# ⑦函数sub(pat,rel,string[,maxsplit=0])使用给定的替换内容将匹配模式的子字符串（最左端并且非常重叠的子字符串）替换掉。
+# ⑧函数escape(string)对字符串中所有可能被解释为正则运算符的字符进行转义的应用函数。用于代替反斜杠。
+#例
+import re
+pat=compile('l')
+str='liwei is a good boy'
+if pat.search(str):
+    print 'found it'
 
 
 

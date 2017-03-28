@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67aae6a9-d22b-4461-8d4d-c634f1c73625" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10.充电时刻—模块/data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.python简介.py" afterPath="$PROJECT_DIR$/1.python简介.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py" afterPath="$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10.充电时刻—模块/data.text" afterPath="$PROJECT_DIR$/10.充电时刻—模块/data.text" />
     </list>
     <ignored path="python_study.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +23,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PythonBasis$hello2.coverage" NAME="hello2 Coverage Results" MODIFIED="1488416797234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonBasis$10___1_.coverage" NAME="10.充电时刻 (1) Coverage Results" MODIFIED="1490182012260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10.充电时刻—模块" />
+    <SUITE FILE_PATH="coverage/PythonBasis$10___1_.coverage" NAME="10.充电时刻 (1) Coverage Results" MODIFIED="1490665442729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10.充电时刻—模块" />
     <SUITE FILE_PATH="coverage/python_study$Script.coverage" NAME="Script Coverage Results" MODIFIED="1476926084291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_study$1111.coverage" NAME="1111 Coverage Results" MODIFIED="1486452681896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_study$8_.coverage" NAME="8.异常 Coverage Results" MODIFIED="1483663416779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -59,8 +58,8 @@
       <file leaf-file-name="10.充电时刻.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="363" column="11" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
+            <state relative-caret-position="286">
+              <caret line="426" column="39" selection-start-line="426" selection-start-column="39" selection-end-line="426" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -112,6 +111,7 @@
         <option value="$PROJECT_DIR$/sys_argv.py" />
         <option value="$PROJECT_DIR$/10.充电时刻.py" />
         <option value="$PROJECT_DIR$/10.充电时刻—模块/numberlines.py" />
+        <option value="$PROJECT_DIR$/10.充电时刻—模块/data.text" />
         <option value="$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py" />
       </list>
     </option>
@@ -153,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -189,6 +188,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,7 +564,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -596,13 +596,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/3.列表和元组.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/7.更加抽象.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -874,6 +867,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/10.充电时刻—模块/data.text" />
     <entry file="file://$PROJECT_DIR$/10.充电时刻—模块/data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -881,17 +875,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/10.充电时刻—模块/data.text">
+    <entry file="file://C:/Python27/Lib/shelve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="8165" selection-start-line="7" selection-start-column="8165" selection-end-line="7" selection-end-column="8165" />
+        <state relative-caret-position="157">
+          <caret line="226" column="0" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="363" column="11" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
+        <state relative-caret-position="286">
+          <caret line="426" column="39" selection-start-line="426" selection-start-column="39" selection-end-line="426" selection-end-column="39" />
           <folding />
         </state>
       </provider>
