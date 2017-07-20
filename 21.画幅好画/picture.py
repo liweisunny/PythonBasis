@@ -1,14 +1,15 @@
 # -*- coding:utf-8 -*-
-from urllib import urlopen
+#from urllib import urlopen
 from reportlab.graphics.shapes import *
 from reportlab.graphics.charts.lineplots import LinePlot
 from reportlab.graphics.charts.textlabels import Label
 from reportlab.graphics import renderPDF
-url='http://www.swpc.noaa.gov/ftpdir/weekly/Predict.txt'
+#url='https://github.com/liweisunny/PythonBasis/blob/Dev/data.txt'
 COMMENT_CHARS='#:'
 drawing=Drawing(400,200)
 data=[]
-for line in urlopen(url).readline():
+datasource=open('data.txt').readlines()
+for line in datasource:
     if not line.isspace() and not line[0] in COMMENT_CHARS:
         data.append([float(n) for n in line.split(',')])
 pred=[row[2] for row in data]

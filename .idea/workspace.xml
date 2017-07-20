@@ -7,87 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67aae6a9-d22b-4461-8d4d-c634f1c73625" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/13.SQLite/food.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/17.扩展Python/IronpythonTest.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/dist/Hello-1.0.win-amd64.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/dist/Hello-1.0.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/dist/bz2.pyd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/dist/hello.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/dist/library.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/dist/python27.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/dist/select.pyd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/dist/unicodedata.pyd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/21.画幅好画/hello.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/21.画幅好画/report1.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10.充电时刻—模块/template.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10.充电时刻—模块/templatetest" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11.文件和素材/11.文件和素材.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11.文件和素材/somefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12.图形用户界面/12.图形用户界面.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12.图形用户界面/FileDialog.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12.图形用户界面/MessageDialog.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12.图形用户界面/text" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12.图形用户界面/画板.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12.图形用户界面/计算器.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/13.SQLite/13.SQLite.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/13.SQLite/ABBREV.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/14.1.客户机.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/14.1.服务器.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/SocketSever.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/Twisted.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/select服务器.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/urllib和urllib2模块.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/14.网络编程/多连接.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/15.Python和万维网/15.Python和万维网.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/15.Python和万维网/Error.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/15.Python和万维网/Test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/16.测试/16.测试.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/16.测试/ADD.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/16.测试/Square.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/17.扩展Python/17.扩展python.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/MANIFEST" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/build/lib/hello.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/hello.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/build/bdist.win-amd64/winexe/temp/bz2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/build/bdist.win-amd64/winexe/temp/select.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/build/bdist.win-amd64/winexe/temp/unicodedata.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/hello.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/py2exe/setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.程序打包/setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/ConfigParser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/config.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/dbconfig.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/loging.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/test.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/tst.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.好玩的编程/程序灵活性实现方案" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/handlers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/markup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/rules.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/simple_markup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/test_input.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/test_output.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/20.即时标记/util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/21.画幅好画/picture.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/21.画幅好画/simple_picture.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/1.BeautifulSoup前例.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/10.指定文档解析器.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/2.Tag.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/3.NavigableString.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/4.BeautifulSoup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/5.Comment.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/6.遍历文档树.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/7.搜索文档树.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/8.修改文档树.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/9.输出.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/TestHtml1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/今日头条-街拍.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautifulSoup语法/今日头条.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py" afterPath="$PROJECT_DIR$/10.充电时刻—模块/10.充电时刻.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/难点记录" afterPath="$PROJECT_DIR$/难点记录" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/21.画幅好画/picture.py" afterPath="$PROJECT_DIR$/21.画幅好画/picture.py" />
     </list>
     <ignored path="python_study.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -139,7 +60,7 @@
     <SUITE FILE_PATH="coverage/PythonBasis$3_BeautifulSoup_NavigableString.coverage" NAME="3.BeautifulSoup-NavigableString Coverage Results" MODIFIED="1497917870543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BeautifulSoup语法" />
     <SUITE FILE_PATH="coverage/PythonBasis$Beautiful_Soup.coverage" NAME="Beautiful Soup语法 Coverage Results" MODIFIED="1497864161215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BeautifulSoup语法" />
     <SUITE FILE_PATH="coverage/PythonBasis$ConfigParser.coverage" NAME="ConfigParser Coverage Results" MODIFIED="1499585239535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/19.好玩的编程" />
-    <SUITE FILE_PATH="coverage/PythonBasis$picture.coverage" NAME="picture Coverage Results" MODIFIED="1500512353796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21.画幅好画" />
+    <SUITE FILE_PATH="coverage/PythonBasis$picture.coverage" NAME="picture Coverage Results" MODIFIED="1500513936355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21.画幅好画" />
     <SUITE FILE_PATH="coverage/PythonBasis$6_.coverage" NAME="6.遍历文档树 Coverage Results" MODIFIED="1498007737596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BeautifulSoup语法" />
     <SUITE FILE_PATH="coverage/python_study$_.coverage" NAME="抽象-函数 Coverage Results" MODIFIED="1480844597505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonBasis$SocketSever.coverage" NAME="SocketSever Coverage Results" MODIFIED="1495760456682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/14.网络编程" />
@@ -171,20 +92,7 @@
     <favorites_list name="python_study" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="picture.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/21.画幅好画/picture.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding>
-                <element signature="e#23#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -265,10 +173,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
-    <option name="y" value="-217" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -311,8 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,22 +237,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PythonBasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PythonBasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="21.画幅好画" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -735,20 +629,20 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-217" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25104168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35285506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25291005" sideWeight="0.47447917" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2527646" sideWeight="0.4795022" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25291005" sideWeight="0.52552086" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2527646" sideWeight="0.5204978" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2969984" sideWeight="0.477306" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44233808" sideWeight="0.47437775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -809,6 +703,16 @@
           <line>5</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/21.画幅好画/picture.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/21.画幅好画/picture.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -820,7 +724,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="112" />
+      <option name="time" value="114" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -840,13 +744,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BeautifulSoup语法/1.BeautifulSoup前例.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/8.异常.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1132,7 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,9 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-          <folding>
-            <element signature="e#23#36#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1150,18 +1043,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#38#70#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/urllib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="921" column="47" selection-start-line="921" selection-start-column="47" selection-end-line="921" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/21.画幅好画/picture.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="114">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
           <folding>
-            <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#51#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
