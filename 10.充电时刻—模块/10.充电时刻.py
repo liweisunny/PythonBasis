@@ -75,7 +75,7 @@ print copy.__file__#这个是输出copy模块源代码文件的路径，查看�
 
 # ⑤ sys.platform模块变量(它是个字符串)是解释器正在其上运行的“平台”名称。它可能是标识操作系统的名字(比如sunos5或者win32 )，也可能标识其他种类的平台，如果你运行Jython的话，就是.lava虚拟机(比如：Java1.4.0 )。
 
-# ⑥ sys.stdin, sys.stdout和sys.stderr模块变量是类文件流对象。它们表示标准UNIX概念中的标淮输入、标准输出和标准错误。简单来说卫尹1110I1利用sys.stdin获得输人(比如用于函数input和raw_input中的输入)，利用sys.stdout输出。
+# ⑥ sys.stdin, sys.stdout和sys.stderr模块变量是类文件流对象。它们表示标准UNIX概念中的标淮输入、标准输出和标准错误。简单来说可以利用sys.stdin获得输人(比如用于函数input和raw_input中的输入)，利用sys.stdout输出。
 
 
 # 10.3.2 os 这个模块为你提供了访问多个操作系统服务的功能。
@@ -170,7 +170,7 @@ print a.copy()
 print a.copy() is a
 
 #说明：集合是可变的，所以不能用作字典中的键。另外一个问题就是集合本身只能包含不可变（可散列的）值，所以也就不能包含其他集合，在实际当中，集合的集合很是常用，所以这就是个问题了.。
-# 幸好嗨哟个frozenset类型，用于代表不可变（可散列）的集合
+# 幸好有个frozenset类型，用于代表不可变（可散列）的集合
 #例
 a=set(range(5))
 b=set(range(2,5))
@@ -327,15 +327,15 @@ s=shelve.open("data.text")
 s['x']=['a','b','c']
 s['x'].append('d')
 print s['x']#结果是['a','b','c']
-# 说明：当你在shelf对象中查找元素的时候，这个对象都回根据已经存储的版本进行重新构建吗，当你将元素赋给某个键的时候，它就被存储了，上述列子，
-# ①列表['a','b','c']存储在键x下；②获得存储的表示，并且根据它来创建新的列表，而‘d’被天剑到这个副本中，修改的版本还没有保存；③最终，再次获得原始版本--没有‘d’。
+# 说明：当你在shelf对象中查找元素的时候，这个对象都会根据已经存储的版本进行重新构建，当你将元素赋给某个键的时候，它就被存储了，上述列子，
+# ①列表['a','b','c']存储在键x下；②获得存储的表示，并且根据它来创建新的列表，而‘d’被添加到这个副本中，修改的版本还没有保存；③最终，再次获得原始版本--没有‘d’。
 # 为了正确地使用shelve模块修改存储的对象，必须将临时变量绑定到获得的副本上，并且在它被修改后重新存储这个副本：
 temp=s['x']
 temp.append('d')
 s['x']=temp
 print s['x']
 s.close()
-# Python 2.4之后的版本还有个解决方法:将。pen函数的writeback参数设为true。如果这样做，所有从shel赎取或者赋值到shel哟数据结构都会保存在内存(缓存)中，并且只有在关闭shelf
+# Python 2.4之后的版本还有个解决方法:将open函数的writeback参数设为true。如果这样做，所有从sheld读取或者赋值到shel哟数据结构都会保存在内存(缓存)中，并且只有在关闭shelf
 # 时候才写回到磁盘中。如果处理的数据不大，并且不想考虑这些问题，那么将writeback设为true(确保在最后关闭了shelf)的方法还是不错的。
 #练习 ，数据存储小程序
 #① 创建数据存储方法（store_data） ② 创建查询数据的方法（select_data） ③ 输出帮助信息的方法(help) ④接收命令的方法（receive_cmd） ⑤ 主程序方法
@@ -401,13 +401,13 @@ def main():
 # 只想匹配'python'和'perl',所需的模式可以写成'python|perl',但是有些时候不需要对整个模式使用选择运算符---只是模式的一部分。
 # 这时可以使用圆括号括起来需要的部分，或称子模式。可以写成'p(ython|erl)'。（注意术语子模式也适用于单个字符）
 
-#⑤ 可选项和重复子模式：在子模式后面加上问号，它就变成了可选项
+#⑤ 可选项：在子模式后面加上问号，它就变成了可选项
 #例：
 #r'(http:\\)?(www\.)?python\.org',
 # 这个模式可以匹配的字符串有：'http:\\www.python.org'、'www.python.org'、'python.org'、'http:\\python.org'
 # 上述的例子：①使用原始字符串减少反斜杠的数量；②在使用反斜杠对'.'做了转义；③每个可选子模式都加上了括号；④子模式后面加上问号作为可选项
 
-#⑥(pattern)* 表示允许模式重复0次或多次 ； (pattern)+ 表示允许模式重复1次或多次 ； (pattern){m.n} 表示允许模式重复m至n次。
+#⑥ 重复子模式：(pattern)* 表示允许模式重复0次或多次 ； (pattern)+ 表示允许模式重复1次或多次 ； (pattern){m.n} 表示允许模式重复m至n次。
 #例：
 #r'W+\.python\.org' 可以匹配'W.python.org'、'WW.python,org'、'WWW.python.org'但不能匹配'.python.org';
 #r'W{3,4}\.python\.org' 只能匹配'WWW.python.org'和'WWWW.python.org'
@@ -423,14 +423,131 @@ def main():
 # ③函数match(pattern，string[,flags])会在给定字符串的开头匹配正则表达式，因此 match('p','python')返回True；match('p','www.python.org')返回False
 # ④函数split(pattern，string[,flags]，maxsplit=0)会根据模式的匹配项分割字符串并返回一个列表,maxsplit指定列表返回的元素个数，可以不指定
 # ⑤函数findall(pattern，string)以列表的形式返回给定模式的所有匹配项。
-# ⑦函数sub(pat,rel,string[,maxsplit=0])使用给定的替换内容将匹配模式的子字符串（最左端并且非常重叠的子字符串）替换掉。
+# ⑦函数sub(pat,rel,string[,maxsplit=0])使用给定的替换内容将匹配模式的子字符串（最左端并且非重叠的子字符串）替换掉。
 # ⑧函数escape(string)对字符串中所有可能被解释为正则运算符的字符进行转义的应用函数。用于代替反斜杠。
 #例
 import re
-pat=compile('l')
+pat=re.compile('g')
 str='liwei is a good boy'
 if pat.search(str):
     print 'found it'
 
+pat=re.compile('l')
+if pat.match(str):
+    print 'start found it'
 
+pat=re.compile('[. ]+')#任意长度的.号和空格
+str='a...b.c d  e'
+list=pat.split(str)
+print list
+list=pat.split(str,3)#返回的列表中只包含三个元素
+print list
+
+pat=re.compile('[a-zA-Z0-9]+')
+str='"HM____Err__are you sure?" he said.sounding insecure'
+list=pat.findall(str)
+print list
+pat=re.compile(r'[.?\-",]+')
+list=pat.findall(str)
+print list
+
+pat=re.compile('{name}')
+str='Dear {name}  {name}'
+print pat.sub('lijie',str,1)#从最左端开始寻找符合匹配模式的子字符串，按照指定的替换个数替换，不指定全部替换。
+
+print re.escape('www.python.org')
+
+# 3.匹配对象和组
+#什么是组：指定模式匹配了字符串中某部分的信息，这些‘部分’就是组，简而言之组就是放置在圆括号内的子模式。组的序号取决于它左侧的括号数。组0代表整个模式。
+#例：这个模式 There (was a (wee) (cooper)) who (lived in Fyfe) 中包含的组：
+# 0：There was a wee cooper who lived in Fyfe
+# 1：was a wee cooper
+# 2: wee
+# 3: cooper
+# 4: lived in Fyfe
+
+# re 匹配对象的一些重要方法
+# ①group([group]....]):获取给定子模式(组的)匹配项,如果没有给定组号，默认是0.如果给定一个组号（或者只用默认的0）会返回单个字符串，否则会将对应给定组数的字符串作为元组返回。
+# ②start([group]):返回给定组的匹配项的开始位置(索引)，默认是0，即整个模式
+# ③end([group]):返回给定组的匹配项的结束位置（和分片一下，不包含组的结束位置）返回结果是结束索引加1
+# ④span([group]):以元组的形式返回一个组的开始和结束位置
+#例：
+m=re.match(r'www.(.*)..{3}','www.python.org')
+print m.group(1)#python
+print m.start(1)#4
+print m.end(1)#10
+print m.span(1)#(4,10)
+
+# 4.作为替换的组号和函数
+# 在re函数中使用VERBOSE标志，使正则表达式更易于阅读
+#例
+emphasis_pattern=re.compile(r'''
+                            \* #模式开始
+                            (  #组开始位置
+                            [^\*]+ #捕捉除了星号
+                            )   #结束组
+                            \*
+                            ''',re.VERBOSE)
+
+print re.sub(emphasis_pattern,r'<em>\1</em>','*Hello,*Word*!*')
+#重复运算符--贪婪模式和非贪婪模式
+#例
+pat=r'\*(.+)\*' #这个模式理论上会匹配一个星号加上一个或多个字符串在加上一个星号字符串，但事实上：
+print re.sub(pat,r'<em>\1</em>','*This* is *it*!')#<em>This* is *it</em>!
+#上述结果得知，模式匹配了从开始星号到结束星号的全部内容，这正是贪婪模式的体现，解决这个问题的方式，使用重复运算符的非贪婪模式：加一个问号
+#例
+pat=r'\*(.+?)\*'
+print re.sub(pat,r'<em>\1</em>','*This* is *it*!')#<em>This</em> is <em>it</em>!
+pat=r'\*\*(.+?)\*\*'
+print re.sub(pat,r'<em>\1</em>','**This** is **it**!')#<em>This</em> is <em>it</em>!
+
+#5. 模板系统
+#python有一种高级的模板机制：字符串格式化。但是使用还早呢规则表达式可以让系统更加高级，假设需要把所有'[somethings]'(字段)的匹配项替换为通过Python表达式计算出来的something结果，所以下面字符串：
+# 'The sum of 7 and 9 is [7+9].' 应该为 'The sum of 7 and 9 is 16.'
+# '[name="liwei"]Hello,[name]'   应该为 'Hello,liwei'
+#实现上述字符串转变的方式：
+# 可以使用正则表达式【匹配字段，提取 内容；
+# 可以使用eval计算字符串值，提供包含作用域的字典。可以在try/except语句内进行这项工作，如果引发了SyntaxError异常，可能是某些语句出现了问题（比如赋值），应该使用exec来代替。
+# 可以使用exec执行字符串（和其他语句）的赋值操作，在字典中保存模板作用域
+# 可以使用re.sub将求职的结果替换为处理后的字符串。
+
+#创建一个模板系统：
+import fileinput,re
+#创建模式匹配中括号里的字段
+field_pat=re.compile(r'\[(.+?)\]')
+
+#收集变量
+scope={}
+
+#定义函数，用于re.sub中：
+def replacement(match):
+    code=match.group(1)
+    try:
+        #如果字段可以求值，返回它：
+        return str(eval(code,scope))
+    except SyntaxError:
+        # 否则执行相同作用域内的赋值语句
+        exec code in scope
+        #返回空字符串
+        return ''
+
+#将所有文本以一个字符串的形式获取：
+lines=[]
+for line in fileinput.input():
+     lines.append(line)
+text=''.join(lines)
+#将field模式的所有匹配项都替换掉：
+print field_pat.sub(replacement,text)
+#说明：上述案列：
+#定义了用于匹配字段的模式。
+#创建充当模板作用域的字典。
+#定义具有下列功能的替换函数。
+  #.将组1从匹配中取出，放人code中;
+  #.通过将作用域字典作为命名空间来对code进行求值，将结果转换为字符串返回。如果
+  # 成功的话，字段就是个表达式，一切正常。否则(也就是引发了SyntaxError异常)，跳
+  #  到下一步;
+  #.执行在相同命名空间(作用域字典)内的字段来对表达式求值，返回空字符串(因为
+  #  赋值语句没有对任何内容进行求值)。
+#使用fileinput读取所有可用的行，将其放入列表，组合成一个大字符串。
+#将所有field pat的匹配项用re.sub中的替换函数进行替换，并且打印结果。
 
