@@ -1,0 +1,5 @@
+Sun, 09 Jul 2017 16:56:15 loging.py[line:18] DEBUG debug message
+Sun, 09 Jul 2017 16:56:15 loging.py[line:19] INFO info message
+Sun, 09 Jul 2017 16:56:15 loging.py[line:20] WARNING warning message
+Sun, 09 Jul 2017 16:56:15 loging.py[line:21] ERROR error message
+Sun, 09 Jul 2017 16:56:15 loging.py[line:22] CRITICAL critical message
